@@ -14,7 +14,9 @@ RUN apt-get update -y && apt-get install -y \
     gstreamer0.10-tools
 
 RUN apt-get install -y \
-    alsa-base
+    pulseaudio
+
+ENV PULSE_SERVER 172.17.42.1
 
 RUN pip install -U mopidy
 
