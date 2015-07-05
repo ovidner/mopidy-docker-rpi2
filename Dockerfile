@@ -13,6 +13,9 @@ RUN apt-get update -y && apt-get install -y \
     gstreamer0.10-plugins-ugly \
     gstreamer0.10-tools
 
+RUN apt-get install -y \
+    alsa-base
+
 RUN pip install -U mopidy
 
 RUN adduser --disabled-password --gecos "" $PROJECT_NAME
