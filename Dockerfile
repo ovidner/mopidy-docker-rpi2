@@ -22,4 +22,5 @@ RUN pip install -U mopidy
 
 RUN adduser --disabled-password --gecos "" $PROJECT_NAME
 
+EXPOSE 6600 6680
 CMD ["mopidy"]
